@@ -23,7 +23,8 @@ public class SwingDemo {
     // create a text based label
     JLabel jlab = new JLabel(" Swing is the new GUI");
 
-
+    // add the label to the content pane
+    jfrm.getContentPane().add(jlab);
         
     // Add the label to the content pane
     jfrm.setVisible(true);
