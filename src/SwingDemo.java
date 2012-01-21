@@ -12,18 +12,30 @@ public class SwingDemo {
     
     SwingDemo() { 
     // 1st Create the JFrame container.
-    JFrame jfrm = new JFrame("A very Simple Swing Program");
+    JFrame jfrm = new JFrame("A very Simple Swing Program.");
         
     // Initial size 
     jfrm.setSize(274, 100);
     
     // set default on close
     jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    
+        
+    // Add some buttons
+    JButton jbtnFirst = new JButton("First");
+    JButton jbtnSecond = new JButton("Second");
+        
+    // Add action listeners
+    jbtnFirst.addActionListener(this);
+    jbtnSecond.addActionListener(this);
+        
+      
     // create a text based label
     JLabel jlab = new JLabel(" Swing is the new GUI");
 
     // add the label to the content pane
+    
+    jfrm.getContentPane().add(jbtnFirst);
+    jfrm.getContentPane().add(jbtnSecond);
     jfrm.getContentPane().add(jlab);
         
     // Add the label to the content pane
